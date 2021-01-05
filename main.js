@@ -178,9 +178,11 @@ function init() {
 			}, 500);
 
 			heads = [];
+			doInit = true;
 			for(let i = 0; i < 50; i++) {
 				newHead();
 			}
+			doInit = false;
 
 		}
 		console.log(sum);
@@ -190,7 +192,6 @@ function init() {
 	});
 
 	if(doInit) {
-
 		doInit = false;
 	}
 	
