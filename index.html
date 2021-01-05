@@ -8,7 +8,7 @@
 		<div class="content">
 			<h1>De Robin Clicker clicker</h1>
 			<p>Je hebt <span class="points"></span></p>
-			<p>High score: <span class="highscore">0</span></p>
+			<p onclick="if(confirm('High score resetten?')) { localStorage.clear(); location.reload(); }">High score: <span class="highscore">0</span></p>
 			<canvas></canvas>
 		</div>
 	</body>
