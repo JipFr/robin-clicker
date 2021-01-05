@@ -4,6 +4,7 @@ let points = 0;
 let highscore = Number(localStorage.getItem("highscore")) || 0
 const maxAge = 40;
 let minSpeed = 5;
+let doInit = true;
 
 // Draw
 const canvas = document.querySelector("canvas");
@@ -35,7 +36,7 @@ let heads = [];
 
 function newHead() {
 	heads.push({
-		x: Math.random() * canvas.width,
+		x: doInit ? Math.random() * canvas.width : Math.floor(Math.random() * 2) === 0 ? 0 : canvas.width + 200,
 		y: Math.random() * canvas.height,
 		image: images[Math.floor(Math.random() * images.length)],
 		direction: Math.random() * (Math.PI*2),
@@ -188,6 +189,11 @@ function init() {
 
 	});
 
+	if(doInit) {
+
+		doInit = false;
+	}
+	
 	main();
 	setInterval(main, 1e3 / 60);
 	updatePoints();
