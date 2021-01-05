@@ -161,7 +161,7 @@ function init() {
 			
 			heads = heads.filter(v => v !== closest);
 
-			minSpeed++
+			minSpeed += 0.1;
 			newHead();
 
 		} else {
@@ -180,7 +180,7 @@ function init() {
 			for(let i = 0; i < 50; i++) {
 				newHead();
 			}
-			
+
 		}
 		console.log(sum);
 
