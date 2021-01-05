@@ -36,7 +36,7 @@ let heads = [];
 
 function newHead() {
 	heads.push({
-		x: Math.floor(Math.random() * 2) === 0 ? 0 : canvas.width + 200,
+		x: Math.floor(Math.random() * 2) === 0 ? -200 : canvas.width + 200,
 		y: Math.random() * canvas.height,
 		image: images[Math.floor(Math.random() * images.length)],
 		direction: Math.random() * (Math.PI*2),
