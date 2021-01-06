@@ -14,7 +14,7 @@ canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
 // Generate sources
-const imageCount = 11;
+const imageCount = 20;
 const sources = [];
 for(let i = 1; i <= imageCount; i++) {
 	sources.push(`hoofden/${i}.png`);
